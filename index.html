@@ -1,810 +1,553 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ashutosh Aagawane - Senior Python Developer | Web Scraping Expert | API Development & Integration | AWS | ETL | Data Pipeline">
-    <title>Ashutosh Aagawane - Senior Python Developer Portfolio</title>
-    
-    <!-- Fonts -->
+    <title>Ashutosh Aagawane — Senior Python Developer</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <body class="modern-portfolio">
-    <!-- Navigation -->
+  <body class="site">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Page scroll progress"></div>
+
     <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#home" class="logo">Ashutosh Aagawane</a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+      <div class="container navbar__inner">
+        <a href="#home" class="logo">
+          <span class="logo__mark">AA</span>
+          <span class="logo__text">Ashutosh Aagawane</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+          <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true"></i>
+          <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--light" aria-hidden="true"></i>
+        </button>
+      </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="code-grid"></div>
+    <main id="main">
+      <section id="home" class="hero">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__mesh"></div>
+          <div class="hero__grid"></div>
+          <div class="hero__orb hero__orb--a"></div>
+          <div class="hero__orb hero__orb--b"></div>
+          <div class="hero__orb hero__orb--c"></div>
         </div>
+
+        <div class="container hero__layout">
+          <div class="hero__copy reveal" data-reveal>
+            <p class="hero__eyebrow">
+              <span class="hero__dot"></span>
+              Available for senior backend &amp; data roles
+            </p>
+            <h1 class="hero__title">
+              Building <span class="text-gradient">scalable Python</span> systems, APIs &amp; data pipelines.
+            </h1>
+            <div class="hero__roles" aria-live="polite">
+              <span class="hero__roles-prefix">I am a</span>
+              <span class="hero__role-text" id="roleText"></span>
+              <span class="hero__cursor" aria-hidden="true">|</span>
+            </div>
+            <p class="hero__lead">
+              Senior Python developer with 6+ years shipping backends, REST APIs, scraping at scale, and AWS data workflows—from idea to production.
+            </p>
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                Let’s talk
+              </a>
+              <a href="resume.pdf" class="btn btn--ghost" download>
+                <i class="fas fa-download" aria-hidden="true"></i>
+                Resume
+              </a>
+            </div>
+            <dl class="hero__stats">
+              <div class="hero__stat">
+                <dt class="hero__stat-label">Experience</dt>
+                <dd class="hero__stat-value">6+ yrs</dd>
+              </div>
+              <div class="hero__stat">
+                <dt class="hero__stat-label">Focus</dt>
+                <dd class="hero__stat-value">API · ETL · AWS</dd>
+              </div>
+              <div class="hero__stat">
+                <dt class="hero__stat-label">Location</dt>
+                <dd class="hero__stat-value">Mumbai, IN</dd>
+              </div>
+            </dl>
+            <div class="hero__social">
+              <a href="https://github.com/Ashu9594" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="GitHub profile">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/ashutoshagawane-b14233192/" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="LinkedIn profile">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal reveal--delay" data-reveal>
+            <div class="hero__frame">
+              <div class="hero__frame-ring" aria-hidden="true"></div>
+              <img src="ashu1.jpg" alt="Portrait of Ashutosh Aagawane" class="hero__photo" width="400" height="400" loading="eager">
+            </div>
+            <div class="hero__floating-card" aria-hidden="true">
+              <span class="mono">stack.py</span>
+              <code class="hero__code-snippet">FastAPI · Django · Glue · Selenium</code>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="scroll-hint" id="scrollHint" aria-label="Scroll to about section">
+          <span class="scroll-hint__mouse" aria-hidden="true"><span class="scroll-hint__wheel"></span></span>
+          <span class="scroll-hint__label">Explore</span>
+        </button>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Python</span><span>FastAPI</span><span>Django</span><span>REST</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>AWS Glue</span><span>Athena</span><span>CloudWatch</span><span>Selenium</span><span>ETL</span><span>Scrapy</span>
+          <span>Python</span><span>FastAPI</span><span>Django</span><span>REST</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>AWS Glue</span><span>Athena</span><span>CloudWatch</span><span>Selenium</span><span>ETL</span><span>Scrapy</span>
+        </div>
+      </div>
+
+      <section id="about" class="section section--about">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-image-wrapper fade-in">
-                    <img src="ashu1.jpg" alt="Ashutosh Aagawane" class="hero-image">
+          <header class="section-head reveal" data-reveal>
+            <p class="section-kicker">About</p>
+            <h2 class="section-title">Engineering clarity into complex data products.</h2>
+            <p class="section-lead">Python-first developer with a track record across fintech, analytics, and automation—turning messy sources into reliable systems.</p>
+          </header>
+
+          <div class="about-grid">
+            <article class="panel reveal" data-reveal>
+              <div class="panel__icon"><i class="fas fa-user-astronaut" aria-hidden="true"></i></div>
+              <h3 class="panel__title">Who I am</h3>
+              <p class="panel__text">
+                I’m Ashutosh Aagawane, a Senior Python Developer focused on web scraping, APIs, product backends, and cloud data workflows. I care about automation, observability, and code that teams can extend with confidence.
+              </p>
+              <p class="panel__text">
+                Curiosity keeps me learning; pragmatism keeps me shipping—balancing speed with maintainability.
+              </p>
+            </article>
+            <article class="panel reveal" data-reveal>
+              <div class="panel__icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+              <h3 class="panel__title">What I do</h3>
+              <p class="panel__text">
+                I design high-performance backends and REST APIs, automate large-scale scraping, and build ETL and monitoring on AWS. I collaborate closely with product, data, and frontend teams to land features safely in production.
+              </p>
+              <p class="panel__text">
+                From dashboards to pipelines, I optimize for reliability, cost, and developer experience.
+              </p>
+            </article>
+          </div>
+
+          <div class="pillars">
+            <div class="pillar reveal" data-reveal>
+              <span class="pillar__num">01</span>
+              <h4 class="pillar__title">Clean architecture</h4>
+              <p class="pillar__text">Maintainable Python, clear boundaries, sensible abstractions.</p>
+            </div>
+            <div class="pillar reveal" data-reveal>
+              <span class="pillar__num">02</span>
+              <h4 class="pillar__title">Problem depth</h4>
+              <p class="pillar__text">Mapping business needs to robust technical designs.</p>
+            </div>
+            <div class="pillar reveal" data-reveal>
+              <span class="pillar__num">03</span>
+              <h4 class="pillar__title">Performance</h4>
+              <p class="pillar__text">Tuning for throughput, latency, and cloud efficiency.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section--skills">
+        <div class="container">
+          <header class="section-head reveal" data-reveal>
+            <p class="section-kicker">Skills</p>
+            <h2 class="section-title">Stack I ship with every week.</h2>
+          </header>
+
+          <div class="skills-wrap">
+            <div class="skill-block reveal" data-reveal>
+              <h3 class="skill-block__title">Core</h3>
+              <div class="skills-grid">
+                <div class="skill-tile" data-skill="95">
+                  <div class="skill-tile__icon skill-tile__icon--py"><i class="fab fa-python" aria-hidden="true"></i></div>
+                  <h4>Python</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">95%</span>
                 </div>
-                <h1 class="hero-name fade-in-delay-1">
-                    <span class="gradient-text">Ashutosh Aagawane</span>
-                </h1>
-                <div class="animated-roles fade-in-delay-2">
-                    <span class="role-text" id="roleText"></span>
-                    <span class="cursor">|</span>
+                <div class="skill-tile" data-skill="90">
+                  <div class="skill-tile__icon skill-tile__icon--dj"><i class="fab fa-python" aria-hidden="true"></i></div>
+                  <h4>Django</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">90%</span>
                 </div>
-                <p class="hero-description fade-in-delay-3">
-                    Experienced Senior Python Developer with 6+ years of expertise in designing, developing, and maintaining 
-                    scalable backend systems and RESTful APIs. Proven success in delivering end-to-end Python projects from 
-                    conception to deployment.
+                <div class="skill-tile" data-skill="88">
+                  <div class="skill-tile__icon skill-tile__icon--fa"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+                  <h4>FastAPI</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">88%</span>
+                </div>
+                <div class="skill-tile" data-skill="92">
+                  <div class="skill-tile__icon skill-tile__icon--api"><i class="fas fa-code" aria-hidden="true"></i></div>
+                  <h4>REST APIs</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">92%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-block reveal" data-reveal>
+              <h3 class="skill-block__title">Specializations</h3>
+              <div class="skills-grid">
+                <div class="skill-tile" data-skill="90">
+                  <div class="skill-tile__icon skill-tile__icon--sc"><i class="fas fa-spider" aria-hidden="true"></i></div>
+                  <h4>Web scraping</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">90%</span>
+                </div>
+                <div class="skill-tile" data-skill="85">
+                  <div class="skill-tile__icon skill-tile__icon--pg"><i class="fas fa-database" aria-hidden="true"></i></div>
+                  <h4>PostgreSQL</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">85%</span>
+                </div>
+                <div class="skill-tile" data-skill="80">
+                  <div class="skill-tile__icon skill-tile__icon--rd"><i class="fas fa-memory" aria-hidden="true"></i></div>
+                  <h4>Redis</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">80%</span>
+                </div>
+                <div class="skill-tile" data-skill="82">
+                  <div class="skill-tile__icon skill-tile__icon--dk"><i class="fab fa-docker" aria-hidden="true"></i></div>
+                  <h4>Docker</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">82%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-block reveal" data-reveal>
+              <h3 class="skill-block__title">Cloud &amp; tooling</h3>
+              <div class="skills-grid skills-grid--compact">
+                <div class="skill-tile" data-skill="78">
+                  <div class="skill-tile__icon skill-tile__icon--aws"><i class="fab fa-aws" aria-hidden="true"></i></div>
+                  <h4>AWS</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">78%</span>
+                </div>
+                <div class="skill-tile" data-skill="90">
+                  <div class="skill-tile__icon skill-tile__icon--git"><i class="fab fa-git-alt" aria-hidden="true"></i></div>
+                  <h4>Git</h4>
+                  <div class="skill-tile__bar"><span class="skill-tile__fill"></span></div>
+                  <span class="skill-tile__pct">90%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section--projects">
+        <div class="container">
+          <header class="section-head reveal" data-reveal>
+            <p class="section-kicker">Work</p>
+            <h2 class="section-title">Selected builds &amp; platforms.</h2>
+            <p class="section-lead">A mix of dashboards, scraping engines, cloud pipelines, and internal tools—each tuned for real operational load.</p>
+          </header>
+
+          <div class="bento">
+            <article class="bento__item bento__item--hero reveal" data-reveal>
+              <div class="bento__badge">Award · 2023</div>
+              <div class="bento__emoji" aria-hidden="true">🎯</div>
+              <h3 class="bento__title">Data-driven decision platform</h3>
+              <p class="bento__desc">In-house platform with dynamic product &amp; university data via Python scraping. Automated STP pipelines; recognized with Best Future Catalyst Award 2023.</p>
+              <div class="bento__tags">
+                <span>Python</span><span>Scraping</span><span>REST</span><span>Automation</span>
+              </div>
+              <div class="bento__links">
+                <span class="bento__link bento__link--muted"><i class="fab fa-github" aria-hidden="true"></i> Private</span>
+                <span class="bento__link bento__link--muted"><i class="fas fa-lock" aria-hidden="true"></i> Internal</span>
+              </div>
+            </article>
+
+            <article class="bento__item reveal" data-reveal>
+              <div class="bento__emoji" aria-hidden="true">📊</div>
+              <h3 class="bento__title">CREDAUX dashboard &amp; BI</h3>
+              <p class="bento__desc">Dash-based dashboard for rankings &amp; salary insights; automated large-scale reporting.</p>
+              <div class="bento__tags"><span>Python</span><span>Dash</span><span>BI</span></div>
+            </article>
+
+            <article class="bento__item reveal" data-reveal>
+              <div class="bento__emoji" aria-hidden="true">🕷️</div>
+              <h3 class="bento__title">Large-scale scraping</h3>
+              <p class="bento__desc">600+ gaming sites for pricing analytics; Selenium in test harness; proxy-aware crawling.</p>
+              <div class="bento__tags"><span>Selenium</span><span>Scrapy</span><span>Proxies</span></div>
+            </article>
+
+            <article class="bento__item bento__item--wide reveal" data-reveal>
+              <div class="bento__emoji" aria-hidden="true">☁️</div>
+              <h3 class="bento__title">AWS data pipeline &amp; monitoring</h3>
+              <p class="bento__desc">End-to-end AWS workflow: Glue ETL, Athena queries, CloudWatch alerts for operational visibility.</p>
+              <div class="bento__tags"><span>Glue</span><span>Athena</span><span>CloudWatch</span><span>ETL</span></div>
+            </article>
+
+            <article class="bento__item reveal" data-reveal>
+              <div class="bento__emoji" aria-hidden="true">🌐</div>
+              <h3 class="bento__title">In-house web application</h3>
+              <p class="bento__desc">Flask + React dashboards with live data for decision-makers.</p>
+              <div class="bento__tags"><span>Flask</span><span>React</span></div>
+            </article>
+
+            <article class="bento__item reveal" data-reveal>
+              <div class="bento__emoji" aria-hidden="true">🔍</div>
+              <h3 class="bento__title">Anomaly detection</h3>
+              <p class="bento__desc">Python automation to flag irregularities and email stakeholders on business days.</p>
+              <div class="bento__tags"><span>Automation</span><span>Monitoring</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section--experience">
+        <div class="container">
+          <header class="section-head reveal" data-reveal>
+            <p class="section-kicker">Experience</p>
+            <h2 class="section-title">Where I’ve leveled up.</h2>
+          </header>
+
+          <div class="timeline">
+            <div class="timeline__line" aria-hidden="true"></div>
+
+            <article class="timeline-card reveal" data-reveal>
+              <div class="timeline-card__dot"></div>
+              <div class="timeline-card__body">
+                <header class="timeline-card__head">
+                  <span class="timeline-card__icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+                  <div>
+                    <h3 class="timeline-card__title">Senior Software Engineer</h3>
+                    <p class="timeline-card__meta">Morningstar DBRS · Navi Mumbai</p>
+                    <p class="timeline-card__date">Dec 2025 – Present</p>
+                  </div>
+                </header>
+                <ul class="timeline-card__list">
+                  <li>Full-stack apps with Python (FastAPI) and Angular/Vue; cloud-first on AWS.</li>
+                  <li>Async &amp; multi-threaded workflows with strong debugging and user-facing defect resolution.</li>
+                  <li>Agile delivery with distributed teams across the SDLC.</li>
+                </ul>
+                <div class="timeline-card__tags">
+                  <span>Python</span><span>FastAPI</span><span>AWS</span><span>Angular</span><span>Vue</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-card reveal" data-reveal>
+              <div class="timeline-card__dot"></div>
+              <div class="timeline-card__body">
+                <header class="timeline-card__head">
+                  <span class="timeline-card__icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+                  <div>
+                    <h3 class="timeline-card__title">Full Stack Python Developer</h3>
+                    <p class="timeline-card__meta">Aithon Solutions · Mumbai</p>
+                    <p class="timeline-card__date">Sep 2025 – Dec 2025</p>
+                  </div>
+                </header>
+                <ul class="timeline-card__list">
+                  <li>Scalable backends, REST integrations, performance and security hardening.</li>
+                  <li>Collaboration with frontend, design, and QA; code reviews and quality uplift.</li>
+                </ul>
+                <div class="timeline-card__tags">
+                  <span>Python</span><span>Django</span><span>Flask</span><span>FastAPI</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-card reveal" data-reveal>
+              <div class="timeline-card__dot"></div>
+              <div class="timeline-card__body">
+                <header class="timeline-card__head">
+                  <span class="timeline-card__icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+                  <div>
+                    <h3 class="timeline-card__title">Senior Python Developer (Deputy Manager)</h3>
+                    <p class="timeline-card__meta">Auxilo Finserve · Mumbai</p>
+                    <p class="timeline-card__date">July 2022 – Sep 2025</p>
+                  </div>
+                </header>
+                <ul class="timeline-card__list">
+                  <li>Scraping-driven platform; Best Future Catalyst Award 2023.</li>
+                  <li>CREDAUX Dash dashboards; OCR on PDFs; anomaly detection &amp; alerts.</li>
+                  <li>Flask + React internal app; AWS Glue, Athena, CloudWatch pipelines.</li>
+                  <li>Mentoring interns and junior engineers.</li>
+                </ul>
+                <div class="timeline-card__tags">
+                  <span>Python</span><span>Scraping</span><span>Flask</span><span>React</span><span>AWS</span><span>Dash</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-card reveal" data-reveal>
+              <div class="timeline-card__dot"></div>
+              <div class="timeline-card__body">
+                <header class="timeline-card__head">
+                  <span class="timeline-card__icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+                  <div>
+                    <h3 class="timeline-card__title">Data Analyst</h3>
+                    <p class="timeline-card__meta">Eclerx Services · Mumbai</p>
+                    <p class="timeline-card__date">July 2021 – July 2022</p>
+                  </div>
+                </header>
+                <ul class="timeline-card__list">
+                  <li>Proxy-aware crawling; Selenium in automation frameworks.</li>
+                  <li>Pandas, NumPy, Beautiful Soup pipelines; client coordination.</li>
+                </ul>
+                <div class="timeline-card__tags">
+                  <span>Python</span><span>Selenium</span><span>Pandas</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-card reveal" data-reveal>
+              <div class="timeline-card__dot"></div>
+              <div class="timeline-card__body">
+                <header class="timeline-card__head">
+                  <span class="timeline-card__icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+                  <div>
+                    <h3 class="timeline-card__title">Jr Officer (Projects)</h3>
+                    <p class="timeline-card__meta">Vikrant Speciality Services · Mumbai</p>
+                    <p class="timeline-card__date">Feb 2021 – July 2021</p>
+                  </div>
+                </header>
+                <ul class="timeline-card__list">
+                  <li>Django web apps with API integrations; Git-based delivery.</li>
+                  <li>India Post scraping for letter tracking automation.</li>
+                </ul>
+                <div class="timeline-card__tags">
+                  <span>Python</span><span>Django</span><span>Git</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-card reveal" data-reveal>
+              <div class="timeline-card__dot"></div>
+              <div class="timeline-card__body">
+                <header class="timeline-card__head">
+                  <span class="timeline-card__icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+                  <div>
+                    <h3 class="timeline-card__title">Associate Software Engineer</h3>
+                    <p class="timeline-card__meta">Mosaik Risk Solutions · Mumbai</p>
+                    <p class="timeline-card__date">Jan 2020 – June 2020</p>
+                  </div>
+                </header>
+                <ul class="timeline-card__list">
+                  <li>Datahub maintenance: gathering, cleaning, transformation, ETL.</li>
+                  <li>Scraping with Requests, Selenium, and Scrapy.</li>
+                </ul>
+                <div class="timeline-card__tags">
+                  <span>Python</span><span>ETL</span><span>Scrapy</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--contact">
+        <div class="container">
+          <header class="section-head reveal" data-reveal>
+            <p class="section-kicker">Contact</p>
+            <h2 class="section-title">Let’s build something reliable.</h2>
+            <p class="section-lead">Tell me about your stack, timelines, and constraints—I’ll respond as soon as I can.</p>
+          </header>
+
+          <div class="contact-grid">
+            <div class="contact-aside reveal" data-reveal>
+              <div class="contact-card">
+                <h3 class="contact-card__title">Direct</h3>
+                <a href="mailto:agwane16@gmail.com" class="contact-row">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <span>agwane16@gmail.com</span>
+                </a>
+                <a href="tel:+919082465860" class="contact-row">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                  <span>(+91) 9082465860</span>
+                </a>
+                <p class="contact-row contact-row--static">
+                  <i class="fas fa-location-dot" aria-hidden="true"></i>
+                  <span>Mumbai, India</span>
                 </p>
-                <div class="hero-buttons fade-in-delay-4">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i>
-                        Get In Touch
-                    </a>
-                    <a href="resume.pdf" class="btn btn-secondary" download>
-                        <i class="fas fa-download"></i>
-                        Download Resume
-                    </a>
+              </div>
+              <div class="contact-card">
+                <h3 class="contact-card__title">Social</h3>
+                <div class="contact-social">
+                  <a href="https://github.com/Ashu9594" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                  <a href="https://www.linkedin.com/in/ashutoshagawane-b14233192/" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                 </div>
-                <div class="hero-social fade-in-delay-5">
-                    <a href="https://github.com/Ashu9594" target="_blank" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ashutoshagawane-b14233192/" target="_blank" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
+              </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="gradient-text">About Me</span>
-                </h2>
-                <div class="title-underline"></div>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-card glass-card fade-in">
-                    <div class="card-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3 class="card-title">Who I Am</h3>
-                    <p class="card-text">
-                        I'm Ashutosh Aagawane, a Senior Python Developer with extensive expertise in web scraping, 
-                        web application development, API development & integration, and product development. With a strong 
-                        foundation in automation, AWS cloud services, ETL processes, data pipelines, and data monitoring, 
-                        I specialize in creating efficient, scalable solutions that drive business value.
-                    </p>
-                    <p class="card-text">
-                        My journey in software development has been driven by curiosity and a commitment to 
-                        continuous learning. I enjoy tackling complex challenges and turning them into elegant, 
-                        maintainable code that stands the test of time.
-                    </p>
-                </div>
-                
-                <div class="about-card glass-card fade-in">
-                    <div class="card-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="card-title">What I Do</h3>
-                    <p class="card-text">
-                        I design and develop high-performance web applications, RESTful APIs, and scalable backend systems 
-                        using Python. My expertise includes web scraping automation, API development & integration, 
-                        product development, automation solutions, AWS cloud services, ETL processes, data pipeline 
-                        architecture, and comprehensive data monitoring systems.
-                    </p>
-                    <p class="card-text">
-                        I'm passionate about building robust solutions that handle large-scale data processing, 
-                        implementing efficient automation workflows, and creating seamless integrations that enhance 
-                        business operations and drive innovation.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="highlights-grid">
-                <div class="highlight-card glass-card fade-in">
-                    <div class="highlight-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h4>Clean Code</h4>
-                    <p>Writing maintainable, scalable, and efficient Python code following best practices.</p>
-                </div>
-                
-                <div class="highlight-card glass-card fade-in">
-                    <div class="highlight-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h4>Problem Solver</h4>
-                    <p>Transforming complex business requirements into elegant technical solutions.</p>
-                </div>
-                
-                <div class="highlight-card glass-card fade-in">
-                    <div class="highlight-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h4>Performance Focus</h4>
-                    <p>Optimizing applications for speed, scalability, and reliability.</p>
-                </div>
-            </div>
+            <form class="contact-form reveal" id="contactForm" data-reveal>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                Send via email
+              </button>
+            </form>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="gradient-text">Skills & Technologies</span>
-                </h2>
-                <div class="title-underline"></div>
-            </div>
-            
-            <div class="skills-content">
-                <!-- Core Technologies -->
-                <div class="skill-category fade-in">
-                    <h3 class="category-title">Core Technologies</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon python">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <h4>Python</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="95"></div>
-                            </div>
-                            <span class="skill-percentage">95%</span>
-                        </div>
-                        
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon django">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <h4>Django</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="90"></div>
-                            </div>
-                            <span class="skill-percentage">90%</span>
-                        </div>
-                        
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon fastapi">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <h4>FastAPI</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="88"></div>
-                            </div>
-                            <span class="skill-percentage">88%</span>
-                        </div>
-                        
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon api">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h4>REST APIs</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="92"></div>
-                            </div>
-                            <span class="skill-percentage">92%</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Specializations -->
-                <div class="skill-category fade-in">
-                    <h3 class="category-title">Specializations</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon scraping">
-                                <i class="fas fa-spider"></i>
-                            </div>
-                            <h4>Web Scraping</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="90"></div>
-                            </div>
-                            <span class="skill-percentage">90%</span>
-                        </div>
-                        
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon postgres">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h4>PostgreSQL</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="85"></div>
-                            </div>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                        
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon redis">
-                                <i class="fas fa-memory"></i>
-                            </div>
-                            <h4>Redis</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="80"></div>
-                            </div>
-                            <span class="skill-percentage">80%</span>
-                        </div>
-                        
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon docker">
-                                <i class="fab fa-docker"></i>
-                            </div>
-                            <h4>Docker</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="82"></div>
-                            </div>
-                            <span class="skill-percentage">82%</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Tools & Cloud -->
-                <div class="skill-category fade-in">
-                    <h3 class="category-title">Tools & Cloud</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon aws">
-                                <i class="fab fa-aws"></i>
-                            </div>
-                            <h4>AWS</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="78"></div>
-                            </div>
-                            <span class="skill-percentage">78%</span>
-                        </div>
-                        
-                        <div class="skill-card glass-card">
-                            <div class="skill-icon git">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                            <h4>Git</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="90"></div>
-                            </div>
-                            <span class="skill-percentage">90%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="gradient-text">Featured Projects</span>
-                </h2>
-                <div class="title-underline"></div>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card glass-card fade-in">
-                    <div class="project-emoji">📊</div>
-                    <h3 class="project-title">CREDAUX Dashboard & BI Reports</h3>
-                    <p class="project-description">
-                        Developed a user-friendly dashboard using Dash library to address university rankings and 
-                        pay-scale salary inquiries, and to automate large-scale report generation for informed decision-making.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Dash</span>
-                        <span class="tech-tag">Data Visualization</span>
-                        <span class="tech-tag">BI Reports</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fab fa-github"></i>
-                            Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            Demo
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="project-card glass-card fade-in">
-                    <div class="project-emoji">🎯</div>
-                    <h3 class="project-title">Data-Driven Decision Platform</h3>
-                    <p class="project-description">
-                        Developed a robust in-house platform featuring dynamic product and university database using 
-                        Python web scraping. Earned Best Future Catalyst Award 2023 for automating STP pipelines 
-                        and streamlining sales, product, and credit functions.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Web Scraping</span>
-                        <span class="tech-tag">RESTful APIs</span>
-                        <span class="tech-tag">Automation</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fab fa-github"></i>
-                            Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            Demo
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="project-card glass-card fade-in">
-                    <div class="project-emoji">🕷️</div>
-                    <h3 class="project-title">Large-Scale Web Scraping</h3>
-                    <p class="project-description">
-                        Scraped data from 600+ gaming websites for price tracking analytics. Developed Python Selenium 
-                        WebDriver scripts for efficient web scraping within test automation framework. Managed data 
-                        crawling using proxy servers.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Selenium</span>
-                        <span class="tech-tag">Beautiful Soup</span>
-                        <span class="tech-tag">Scrapy</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fab fa-github"></i>
-                            Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            Demo
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="project-card glass-card fade-in">
-                    <div class="project-emoji">☁️</div>
-                    <h3 class="project-title">AWS Cloud Data Pipeline & Monitoring</h3>
-                    <p class="project-description">
-                        Designed and implemented end-to-end data processing workflow on AWS Cloud, leveraging AWS Glue 
-                        for ETL scripting and job orchestration, Athena for on-demand querying, and CloudWatch for 
-                        real-time monitoring and alert management.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AWS Glue</span>
-                        <span class="tech-tag">AWS Athena</span>
-                        <span class="tech-tag">CloudWatch</span>
-                        <span class="tech-tag">ETL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fab fa-github"></i>
-                            Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            Demo
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="project-card glass-card fade-in">
-                    <div class="project-emoji">🌐</div>
-                    <h3 class="project-title">In-House Web Application</h3>
-                    <p class="project-description">
-                        Developed an in-house web application using Flask and React JS, enabling interactive dashboards 
-                        and real-time data insights to support informed decision-making processes.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fab fa-github"></i>
-                            Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            Demo
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="project-card glass-card fade-in">
-                    <div class="project-emoji">🔍</div>
-                    <h3 class="project-title">Anomaly Detection System</h3>
-                    <p class="project-description">
-                        Engineered and executed anomaly detection techniques using Python automation scripts, detecting 
-                        irregularities in data. Implemented a system that identifies anomalies and sends email alerts 
-                        to all stakeholders on working days.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Automation</span>
-                        <span class="tech-tag">Data Monitoring</span>
-                        <span class="tech-tag">Email Alerts</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fab fa-github"></i>
-                            Code
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="gradient-text">Professional Experience</span>
-                </h2>
-                <div class="title-underline"></div>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <div class="timeline-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <h3 class="timeline-title">Senior Software Engineer</h3>
-                                <p class="timeline-company">Morningstar DBRS, Navi Mumbai</p>
-                                <p class="timeline-period">Dec 2025 - Present</p>
-                            </div>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Design, develop, and maintain robust full-stack applications using Python (FastAPI) and modern JavaScript frameworks like Angular and Vue</li>
-                            <li>Build and debug cloud-based applications (AWS preferred) with strong dependency and infrastructure awareness</li>
-                            <li>Work directly with end users to analyze issues, fix defects, and enhance functionality</li>
-                            <li>Develop asynchronous and multi-threaded workflows with strong debugging practices</li>
-                            <li>Contribute actively across the SDLC, ensuring timely and high-quality releases</li>
-                            <li>Collaborate in Agile/Scrum environments with distributed global teams</li>
-                        </ul>
-                        <div class="timeline-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Full-Stack Development</span>
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">Vue</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <div class="timeline-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <h3 class="timeline-title">Full Stack Python Developer</h3>
-                                <p class="timeline-company">Aithon Solutions, Mumbai</p>
-                                <p class="timeline-period">Sep 2025 - Dec 2025</p>
-                            </div>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Responsible for designing, developing, and maintaining scalable backend systems using Python</li>
-                            <li>Build and integrate RESTful APIs with front-end applications</li>
-                            <li>Write clean, efficient, and testable code following best development practices</li>
-                            <li>Optimize performance, ensure security, and maintain data protection</li>
-                            <li>Collaborate with cross-functional teams — including front-end developers, UI designers, and QA</li>
-                            <li>Conduct debugging, testing, and deployment for smooth project delivery</li>
-                            <li>Participate in code reviews and contribute to improving overall code quality</li>
-                        </ul>
-                        <div class="timeline-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">RESTful APIs</span>
-                            <span class="tech-tag">Full-Stack Development</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <div class="timeline-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <h3 class="timeline-title">Senior Python Developer (Deputy Manager)</h3>
-                                <p class="timeline-company">Auxilo Finserve Pvt Ltd, Mumbai</p>
-                                <p class="timeline-period">July 2022 - Sep 2025</p>
-                            </div>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Developed robust in-house platform featuring dynamic product and university database using Python web scraping, earning Best Future Catalyst Award 2023</li>
-                            <li>Designed and maintained RESTful APIs ensuring smooth integration with external systems, enhancing overall platform functionality</li>
-                            <li>Developed CREDAUX Dashboard using Dash library for university rankings, pay-scale salary inquiries, and automated large-scale report generation</li>
-                            <li>Employed OCR technology utilizing Python OCR libraries to extract valuable insights from multiple PDFs during case login, supporting product team in informed year-wise decisions</li>
-                            <li>Engineered anomaly detection techniques using Python automation scripts, detecting irregularities and sending email alerts to stakeholders</li>
-                            <li>Developed in-house web application using Flask and React JS, enabling interactive dashboards and real-time data insights</li>
-                            <li>Designed and implemented end-to-end data processing workflow on AWS Cloud, leveraging AWS Glue, Athena, and CloudWatch</li>
-                            <li>Actively involved in mentoring interns and junior team members, providing hands-on support and strategic task assignments</li>
-                        </ul>
-                        <div class="timeline-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Web Scraping</span>
-                            <span class="tech-tag">RESTful APIs</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">OCR</span>
-                            <span class="tech-tag">Dash</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <div class="timeline-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <h3 class="timeline-title">Data Analyst</h3>
-                                <p class="timeline-company">Eclerx Services Ltd, Mumbai</p>
-                                <p class="timeline-period">July 2021 - July 2022</p>
-                            </div>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Managed websites and performed data crawling using proxy servers</li>
-                            <li>Developed Python Selenium WebDriver scripts for efficient web scraping within a test automation framework</li>
-                            <li>Coordinated project requirements with clients via email, ensuring effective communication</li>
-                            <li>Utilized Pandas, NumPy, lxml, and Beautiful Soup modules for seamless data extraction and manipulation</li>
-                            <li>Proficient in extracting and organizing data using Excel</li>
-                            <li>Scraped data from 600+ gaming websites for price tracking analytics</li>
-                        </ul>
-                        <div class="timeline-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Selenium</span>
-                            <span class="tech-tag">Web Scraping</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">NumPy</span>
-                            <span class="tech-tag">Beautiful Soup</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <div class="timeline-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <h3 class="timeline-title">Jr Officer (Projects)</h3>
-                                <p class="timeline-company">Vikrant Speciality Services Pvt Ltd, Mumbai</p>
-                                <p class="timeline-period">February 2021 - July 2021</p>
-                            </div>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Handled end-to-end project processes, including requirements gathering, system analysis, development, testing, and deployment</li>
-                            <li>Utilized Git for efficient source control management</li>
-                            <li>Created web applications in Python using Django, integrating third-party APIs</li>
-                            <li>Built desktop applications using Python</li>
-                            <li>Managed effective communication with clients through email</li>
-                            <li>Scraped India Post website for in-house letter tracking, enhancing efficiency in printing house</li>
-                        </ul>
-                        <div class="timeline-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">Git</span>
-                            <span class="tech-tag">Web Scraping</span>
-                            <span class="tech-tag">API Integration</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <div class="timeline-header">
-                            <div class="timeline-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <h3 class="timeline-title">Associate Software Engineer</h3>
-                                <p class="timeline-company">Mosaik Risk Solutions, Mumbai</p>
-                                <p class="timeline-period">January 2020 - June 2020</p>
-                            </div>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Contributed to maintenance and development of Datahub projects, specializing in data gathering, cleaning, transformation, and ETL processes</li>
-                            <li>Utilized Python libraries for discrete business-relevant analytics encoding</li>
-                            <li>Executed web scraping tasks using Python libraries, including Requests, Selenium, and Scrapy</li>
-                        </ul>
-                        <div class="timeline-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">ETL</span>
-                            <span class="tech-tag">Selenium</span>
-                            <span class="tech-tag">Scrapy</span>
-                            <span class="tech-tag">Data Processing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="gradient-text">Get In Touch</span>
-                </h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">
-                    Have a project in mind or want to collaborate? I'd love to hear from you. 
-                    Send me a message and I'll respond as soon as possible.
-                </p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info fade-in">
-                    <div class="info-card glass-card">
-                        <h3 class="info-title">Contact Information</h3>
-                        <div class="info-items">
-                            <a href="mailto:agwane16@gmail.com" class="info-item">
-                                <div class="info-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <span>agwane16@gmail.com</span>
-                            </a>
-                            <a href="tel:+919082465860" class="info-item">
-                                <div class="info-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <span>(+91) 9082465860</span>
-                            </a>
-                            <a href="#" class="info-item">
-                                <div class="info-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <span>Mumbai, India</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card glass-card">
-                        <h3 class="info-title">Connect With Me</h3>
-                        <div class="social-links">
-                            <a href="https://github.com/Ashu9594" target="_blank" class="social-link" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/ashutoshagawane-b14233192/" target="_blank" class="social-link" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <form class="contact-form glass-card fade-in" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-block">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3 class="footer-logo">Ashutosh Aagawane</h3>
-                    <p>Python Developer passionate about building scalable solutions and clean code.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-social">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/Ashu9594" target="_blank" class="social-link" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/ashutoshagawane-b14233192/" target="_blank" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:agwane16@gmail.com" class="social-link" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Python Developer Portfolio. Built with HTML, CSS & JavaScript.</p>
-            </div>
+      <div class="container footer__grid">
+        <div>
+          <p class="footer__brand">Ashutosh Aagawane</p>
+          <p class="footer__tagline">Python · APIs · Data platforms</p>
         </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer__copy">&copy; <span id="currentYear"></span> · Crafted with semantic HTML, CSS, and JS</p>
+      </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/js/script.js"></script>
   </body>
 </html>

@@ -25,3 +25,7 @@ resume_text.txt
 
 # Local tooling venv (resume generator)
 .venv-resume/
+
+# Resume lives outside this repo; copy resume.pdf here locally for the download button
+resume/
+resume.pdf

@@ -22,3 +22,6 @@ resume_text.txt
 # Environment files
 .env
 .env.local
+
+# Local tooling venv (resume generator)
+.venv-resume/
